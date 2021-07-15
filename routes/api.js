@@ -14,7 +14,8 @@ module.exports = function(app) {
 })
 
 app.get("/api/workouts/range", ({}, res) => {
-  db.Workout.find({}).last(7).then((Workout) => {
+  db.Workout.find({}).limit(7)
+  .then((Workout) => {
     res.json(Workout);
   }).catch(err => {
     res.status(400).json(err);
