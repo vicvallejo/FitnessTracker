@@ -22,41 +22,7 @@ app.get("/api/workouts/range", ({}, res) => {
   });
 });
 
-  // app.get("/api/workouts", (req, res) => {
-  //     Workout.aggregate([
-	// 	  {
-	// 		  $addFields:{
-	// 			  $sum:"$excercises.duration",
-	// 			  },
-	// 		  },
-	// 	  },
-	// 	  ])
-	// 	  .then((dbWorkout) => {
-  //         res.json(dbWorkout);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //         res.status(400).json(err);
-  //     });
-  // })
-
-  // app.get("/api/workouts/range", ({}, res) => {
-	//   Workout.aggregate([
-	//   		  {
-	//   			  $addFields:{
-	//   				  $sum:"$excercises.duration",
-	//   				  },
-	//   			  },
-	//   		  },
-	// 	  ])
-	// then((dbWorkout) => {
-  //     res.json(dbWorkout);
-  //   }).catch(err => {
-  //     console.log(err);
-  //     res.status(400).json(err);
-  //   });
-  // });
-
+  
   
   app.post("/api/workouts/", (req, res) => {
       db.Workout.create(req.body).then((Workout) => {
